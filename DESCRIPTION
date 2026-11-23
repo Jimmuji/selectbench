@@ -1,0 +1,30 @@
+Package: selectbench
+Title: Compare Variable Selection Methods and Score Them Against the Truth
+Version: 0.1.0
+Authors@R: 
+    person("Jim", "Wang", email = "maojia.wang@mail.utoronto.ca", role = c("aut", "cre"))
+Description: Runs several variable selection methods (forward, backward and
+    bidirectional stepwise regression with AIC or BIC, the lasso with two
+    common choices of the penalty, and best subset selection) on the same
+    data and shows which variables each method picks, in one table and one
+    plot. For simulated data in which the true variables are known, it also
+    scores each method on how many true variables it finds and how many noise
+    variables it picks up, and it can repeat this over many simulated data
+    sets to compare the methods.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Depends: 
+    R (>= 4.1)
+Imports: 
+    ggplot2,
+    ggrepel,
+    glmnet,
+    leaps,
+    parallel,
+    stats
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+LazyData: true
+Config/roxygen2/version: 8.1.1
